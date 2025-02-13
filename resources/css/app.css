@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vos styles personnalisés */
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-xl bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-blue-700 hover:shadow-lg dark:bg-blue-700 dark:hover:bg-blue-600;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center rounded-xl border-2 border-blue-600 px-8 py-3.5 text-base font-semibold text-blue-600 transition-all hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-slate-800/50;
+    }
+
+    .shadow-2xl {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+}
+/* Animation pour le badge populaire */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+ /* Animation personnalisée pour le bouton */
+ .cta-button {
+     position: relative;
+     overflow: hidden;
+ }
+
+ .cta-button::after {
+     content: '';
+     position: absolute;
+     left: 50%;
+     bottom: 0;
+     width: 10px;
+     height: 10px;
+     background: #2F855A;
+     border-radius: 50%;
+     transform: translate(-50%, 100%);
+     transition: all 0.7s ease;
+     z-index: -1;
+ }
+
+ .cta-button:hover::after {
+     transform: translate(-50%, 0) scale(30);}
+.bg-yellow-400 {
+    animation: pulse 2s infinite;
+}
+[x-cloak] {
+    display: none !important;
+}
+
+/* Appliquer Montserrat pour tous les titres h1 à h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Appliquer Roboto pour le reste (texte, liens, etc.) */
+body,
+p,
+a,
+span,
+li,
+div,
+input,
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.dt-layout-row:has(.dt-search),
+.dt-layout-row:has(.dt-length),
+.dt-layout-row:has(.dt-paging) {
+    display: none !important;
+}

@@ -1,0 +1,11 @@
+<x-default-layout>
+  @include('frontend.templates.template3.components.hero-section')
+  @include('frontend.templates.template3.components.categories-section')
+  @include('frontend.templates.template3.components.welcome-section')
+  @include('frontend.templates.template3.components.courses-section')
+  @include('frontend.templates.template3.components.features-section')
+  @include('frontend.templates.template3.components.stats')
+  @include('frontend.templates.template3.components.testimonials-section')
+  @include('frontend.templates.template3.components.blogs-section')
+  @include('frontend.templates.template3.components.review-section')
+</x-default-layout>
